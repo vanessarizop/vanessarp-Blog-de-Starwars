@@ -1,16 +1,19 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import starImageUrl from "../assets/img/starwars.jpg";
+import "../index.css";
+
 
 export const Home = () => {
 
-  const {store, dispatch} =useGlobalReducer()
+  const {store, dispatch} =useGlobalReducer();
 
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-		</div>
+		
+		<div className="container-fluid p-0 bg-dark  lettersstar ">
+			
+				<img src={starImageUrl} className="background-imagen img-fluid w-100"/>
+				</div>
+			
+
 	);
 }; 

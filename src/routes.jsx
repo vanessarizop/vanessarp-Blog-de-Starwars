@@ -7,8 +7,13 @@ import {
 } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
-import { Single } from "./pages/Single";
-import { Demo } from "./pages/Demo";
+import { SingleCardCharacter } from "./pages/SingleCardCharacter";
+import{SingleCardPlanets} from  "./pages/SingleCardPlanets";
+import{SingleCardVehicles} from "./pages/SingleCardVehicles";
+import {Character} from "./pages/Character";
+import {Vehicles} from "./pages/Vehicles";
+import { Planets} from "./pages/Planets";
+
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,8 +28,12 @@ export const router = createBrowserRouter(
 
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
         <Route path= "/" element={<Home />} />
-        <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
-        <Route path="/demo" element={<Demo />} />
+        <Route path="/singlecardcharacter/:theId" element={ <SingleCardCharacter />} />  {/* Dynamic route for single items */}
+       <Route path="/people/" element={<Character />} />
+       <Route path="/singlecardplanets/:theId" element={ <SingleCardPlanets />} />  {/* Dynamic route for single items */}
+       <Route path="/planets/" element={<Planets />} />
+       <Route path="/singlecardvehicles/:theId" element={ <SingleCardVehicles />} />  {/* Dynamic route for single items */}
+       <Route path="/vehicles/" element={<Vehicles/>} />
       </Route>
     )
 );
